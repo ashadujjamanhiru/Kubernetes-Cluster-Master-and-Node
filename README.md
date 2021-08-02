@@ -151,8 +151,19 @@ EOF
 **Install Command on Kubernetes**
     
     yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+	
+cat <<EOF > /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
     
-    
+**Chweck sysctl System**
+	
+	sysctl --system
+
+**Enable Kubelet**
+	
+	systemctl enable kubelet
 
 
 
