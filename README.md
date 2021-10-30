@@ -163,7 +163,7 @@ EOF
 
 **Enable Kubelet**
 	
-	systemctl enable kubelet
+	systemctl enable --now kubelet
 
 
 
