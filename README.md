@@ -86,7 +86,7 @@ and Worker Node ip and host = 192.168.2.122 and Hostname [k8snode01.pc] && 192.1
 
 **Start Docker Service**
 
-    systemctl enable docker && systemctl start docker
+    systemctl start docker && systemctl enable docker
    
 **Check Docker Service**
 
